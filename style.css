@@ -1,0 +1,259 @@
+@font-face {
+	font-display: swap;
+	font-family: 'Josefin Sans';
+	src: url('./fonts/josefin-sans-v32-latin_latin-ext-300.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 300;
+
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Josefin Sans';
+	font-weight: 400;
+	src: url('./fonts/josefin-sans-v32-latin_latin-ext-regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Josefin Sans';
+	font-weight: 600;
+	src: url('./fonts/josefin-sans-v32-latin_latin-ext-600.woff2') format('woff2');
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 400;
+	background-color: hsl(0deg 36% 70% / 4%);
+}
+
+body {
+	height: auto;
+	width: auto;
+	margin: 0;
+}
+
+main {
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.box_logo img {
+	margin: 1.8em auto 1.8em 1.8em;
+	width: 30%;
+}
+
+.box_image_mobile,
+.box_image_mobile img {
+	width: 100%;
+	height: auto;
+}
+
+.box_image_desktop {
+	display: none;
+}
+
+.box_text {
+	padding: 0 3em;
+	display: flex;
+	flex-direction: column;
+}
+
+.box_text h1 {
+	text-align: center;
+	text-transform: uppercase;
+	margin: 1.3em auto 0 auto;
+	font-family: "Josefin Sans";
+	letter-spacing: 0.2em;
+	line-height: 1.1em;
+	font-size: 10vw;
+	color: hsl(0, 36%, 70%);
+}
+
+.box_text #thin {
+	font-weight: 300;
+}
+
+.box_text #bold {
+	font-weight: 600;
+	color: hsl(0, 6%, 24%);
+}
+
+.box_text p {
+	color: hsl(0, 36%, 70%);
+	text-align: center;
+	font-size: 0.8em;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+
+#email_form {
+	width: 100%;
+	margin: 1em 0 1em 0;
+}
+
+.box_input,
+.box_email {
+	width: 100%;
+	margin: 1em 0 0.5em 0;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.box_email input,
+.box_email input:focus {
+	width: 100%;
+	height: 1em;
+	flex: 1;
+	padding: 1em;
+	color: hsl(0, 36%, 70%);
+	border: 1px solid hsla(0, 36%, 70%, 0.6);
+	border-radius: 25px;
+	background-color: hsla(0, 36%, 70%, 0);
+	font-family: "Josefin Sans";
+	font-size: 16px;
+	outline: none;
+	text-indent: 1em;
+	display: flex;
+	align-items: center;
+}
+
+
+.box_email input::placeholder {
+	color: hsl(0, 36%, 70%);
+	opacity: 0.6;
+	font-size: 16px;
+}
+
+.box_email button {
+	height: 3.7em;
+	border-radius: 25px;
+	border: 0px;
+	padding: 0.7em 2em;
+	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	position: absolute;
+	right: 0;
+	top: 1.2em;
+	box-shadow: 0 10px 15px hsla(0, 36%, 70%, 0.493);
+	cursor: pointer;
+}
+
+.box_email button:hover {
+	background: linear-gradient(135deg, hsl(0, 66%, 91%), hsl(0, 68%, 83%));
+}
+
+#error_icon {
+	position: absolute;
+	right: 5em;
+	top: 0.8em;
+}
+
+#error_message {
+	margin: 0 auto;
+	color: hsl(0, 67%, 68%);
+	margin: 0 0 0 2em;
+	font-size: 15px;
+}
+
+#error_icon {
+	display: none;
+}
+
+@media screen and (min-width: 620px) {
+	html {
+		background-image: url(./base-apparel-coming-soon-master/images/bg-pattern-desktop.svg);
+		background-size: contain;
+		height: 100vh;
+		width: 100%;
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: auto auto auto auto;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+
+	.box_logo {
+		grid-area: 1 / 1 / 2 / 4;
+		display: flex;
+		align-items: center;
+		margin-top: 2em;
+		margin-left: 7em;
+		width: 50%;
+		height: 60%;
+	}
+
+	.box_logo img {
+		width: 160px;
+		margin-top: 4em;
+	}
+
+	.box_text {
+		grid-area: 2 / 1 / 5 / 4;
+		width: 62%;
+		margin: 3em 2em auto 6em;
+	}
+
+	.box_text h1 {
+		text-align: left;
+		margin: 0 3em 0 0;
+		font-size: 5vw;
+	}
+
+
+	.box_text p {
+		text-align: left;
+		font-size: 1.2em;
+		line-height: 1.8em;
+		margin-right: 0.5em;
+	}
+
+	.box_email {
+		margin-top: 1.5em;
+		width: 95%;
+	}
+
+
+	.box_email button {
+		padding: 0.7em 3.2em;
+	}
+
+	.box_image_desktop {
+		display: block;
+		grid-area: 1 / 4 / 5 / 6;
+		overflow: hidden;
+		display: flex;
+		justify-content: flex-end;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.box_image_desktop img {
+		object-fit: cover;
+		max-width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+
+	.box_image_mobile {
+		display: none;
+	}
+
+	#error_icon {
+		position: absolute;
+		right: 7em;
+		top: 0.8em;
+	}
+}
