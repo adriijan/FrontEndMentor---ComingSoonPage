@@ -104,7 +104,7 @@ main {
 .box_input,
 .box_email {
 	width: 100%;
-	margin: 1em 0 0.5em 0;
+	margin: 0 0 0.5em 0;
 	display: flex;
 	justify-content: center;
 	position: relative;
@@ -143,7 +143,7 @@ main {
 	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 	position: absolute;
 	right: 0;
-	top: 1.2em;
+	top: 0;
 	box-shadow: 0 10px 15px hsla(0, 36%, 70%, 0.493);
 	cursor: pointer;
 }
@@ -209,20 +209,19 @@ main {
 	.box_text h1 {
 		text-align: left;
 		margin: 0 3em 0 0;
-		font-size: 5vw;
+		font-size: 4.5vw;
 	}
 
 
 	.box_text p {
 		text-align: left;
-		font-size: 1.2em;
+		font-size: 1em;
 		line-height: 1.8em;
-		margin-right: 0.5em;
+		margin-right: 5em;
 	}
 
 	.box_email {
-		margin-top: 1.5em;
-		width: 95%;
+		width: 80%;
 	}
 
 
